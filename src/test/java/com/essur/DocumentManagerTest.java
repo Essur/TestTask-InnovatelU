@@ -1,6 +1,5 @@
 package com.essur;
 
-import com.essur.DocumentManager;
 import com.essur.DocumentManager.Author;
 import com.essur.DocumentManager.Document;
 import com.essur.DocumentManager.SearchRequest;
@@ -59,9 +58,9 @@ public class DocumentManagerTest {
                 .created(Instant.parse("2025-01-03T10:00:00Z"))
                 .build();
 
-        initDocs.put("1", doc1);
-        initDocs.put("2", doc2);
-        initDocs.put("3", doc3);
+        initDocs.put(doc1.getId(), doc1);
+        initDocs.put(doc2.getId(), doc2);
+        initDocs.put(doc3.getId(), doc3);
         documentManager = new DocumentManager(initDocs);
     }
 
